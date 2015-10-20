@@ -8,7 +8,7 @@ var CLASS_PROGRESSION =
 
 var classIndex = 0;
 
-var numberOfFireflies = 500;
+var numberOfFireflies = 2000;
 
 document.addEventListener("DOMContentLoaded", function(event) {
   _.each(_.range(numberOfFireflies), function(i){
