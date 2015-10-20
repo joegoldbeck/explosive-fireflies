@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var insides = document.createElement("div");
     insides.className = "insides";
     firefly.appendChild(insides);
-    firefly.style.left = Math.random() * 100 + '%';
-    firefly.style.top = Math.random() * 100 + '%';
+    var r = Math.random();
+    var theta = Math.random() * 2 * Math.PI;
+    firefly.style.left = (50 + 70 * r * Math.sin(theta)) + '%';
+    firefly.style.top = (50 + 70 * r * Math.cos(theta)) + '%';
     document.body.appendChild(firefly);
   });
+
+  document.body.className = CLASS_PROGRESSION[classIndex];
 
   classIndex++;
 
@@ -28,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     _.each(document.getElementsByClassName("firefly"), function (firefly) {
       firefly.className = "firefly " + CLASS_PROGRESSION[classIndex];
     });
+    document.body.className = CLASS_PROGRESSION[classIndex];
     classIndex++;
   };
 

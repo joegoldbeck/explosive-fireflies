@@ -1,5 +1,21 @@
 body {
   background-color: black;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+      transition: width 2s, height 4s;
+  &.frenzy{
+    margin-top:25%;
+    margin-left:25%;
+    width: 50%;
+    height: 50%
+  }
+  &.explode{
+    margin-top:25%;
+    margin-left:25%;
+    width: 45%;
+    height: 45%
+  }
 }
 
 @animation-length: 7s;
@@ -10,7 +26,7 @@ body {
   &:nth-of-type(@{n}n + @{i}) {
     animation-delay: @i * (@l / @n);
           .insides{
-    animation-delay: @i * (@l / @n);      
+    animation-delay: @i * (@l / @n);
     }
   }
   .even-delay-loop(@n, @l, @i + 1);
@@ -21,7 +37,7 @@ body {
 
     animation-delay: @i * (@l / @n);
         .insides{
-    animation-delay: @i * (@l / @n);      
+    animation-delay: @i * (@l / @n);
     }
   }
   .primes-delay-loop(@n, @l, @i + 1);
